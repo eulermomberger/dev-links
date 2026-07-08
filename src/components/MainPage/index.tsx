@@ -1,4 +1,13 @@
+import { Links } from "../Links";
 import { Profile } from "../Profile";
+
+// Estático agora, mas trocar pelo fetch do prismic depois
+const links = [
+  { label: "Inscreva-se no NLW", href: "https://www.rocketseat.com.br" },
+  { label: "Baixe meu e-book", href: "https://rocketseat.com.br/blog" },
+  { label: "Veja meu portfólio", href: "https://app.rocketseat.com.br/projetos" },
+  { label: "Conheça meu curso", href: "https://www.rocketseat.com.br/formacao/react" },
+];
 
 export function MainPage() {
   return (
@@ -11,6 +20,8 @@ export function MainPage() {
       "
     >
       <Profile />
+
+      <Links links={links} />
     </main>
   );
 }
