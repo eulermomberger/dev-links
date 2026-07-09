@@ -1,5 +1,7 @@
+import { AvailableSocialLinks } from "@/types/social-links";
 import { Links } from "../Links";
 import { Profile } from "../Profile";
+import { SocialLinks } from "../SocialLinks";
 
 // Estático agora, mas trocar pelo fetch do prismic depois
 const links = [
@@ -7,6 +9,13 @@ const links = [
   { label: "Baixe meu e-book", href: "https://rocketseat.com.br/blog" },
   { label: "Veja meu portfólio", href: "https://app.rocketseat.com.br/projetos" },
   { label: "Conheça meu curso", href: "https://www.rocketseat.com.br/formacao/react" },
+];
+
+const socialLinks = [
+  { type: AvailableSocialLinks.GITHUB, href: "https://github.com" },
+  { type: AvailableSocialLinks.INSTAGRAM, href: "https://instagram.com" },
+  { type: AvailableSocialLinks.YOUTUBE, href: "https://youtube.com" },
+  { type: AvailableSocialLinks.LINKEDIN, href: "https://linkedin.com" },
 ];
 
 export function MainPage() {
@@ -22,6 +31,8 @@ export function MainPage() {
       <Profile />
 
       <Links links={links} />
+
+      <SocialLinks socialLinks={socialLinks} />
     </main>
   );
 }
