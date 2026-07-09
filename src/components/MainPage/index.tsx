@@ -2,6 +2,7 @@ import { AvailableSocialLinks } from "@/types/social-links";
 import { Links } from "../Links";
 import { Profile } from "../Profile";
 import { SocialLinks } from "../SocialLinks";
+import { Footer } from "../Footer";
 
 // Estático agora, mas trocar pelo fetch do prismic depois
 const links = [
@@ -33,6 +34,8 @@ export function MainPage() {
       <Links links={links} />
 
       <SocialLinks socialLinks={socialLinks} />
+
+      <Footer/>
     </main>
   );
 }
