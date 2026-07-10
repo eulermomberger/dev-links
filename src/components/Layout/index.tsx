@@ -8,7 +8,7 @@ const inter = Inter({
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className={`${inter.variable} relative flex min-h-screen`}>
+    <div className={`${inter.variable} relative flex`}>
       {children}
     </div>
   );

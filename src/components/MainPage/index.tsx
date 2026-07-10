@@ -18,9 +18,7 @@ export function MainPage({ profile }: MainPageProps) {
     <main
       className="
         flex flex-col justify-center items-center gap-6
-        p-6 
-        h-screen w-screen
-        bg-[url('/assets/bg-mobile-light.jpg')] md:bg-[url('/assets/bg-desktop-light.jpg')] bg-cover
+        h-full w-full
       "
     >
       <Profile

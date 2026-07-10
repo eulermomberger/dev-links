@@ -19,7 +19,14 @@ export default function RootLayout({
       lang="en"
       className='h-full antialiased'
     >
-      <body className="min-h-full flex flex-col">
+      <body
+        className="
+          min-h-screen
+          flex justify-center items-center
+          p-6
+          bg-[url('/assets/bg-mobile-light.jpg')] md:bg-[url('/assets/bg-desktop-light.jpg')] bg-cover
+        "
+      >
         <Layout>{children}</Layout>
       </body>
     </html>
