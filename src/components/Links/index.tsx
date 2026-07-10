@@ -1,9 +1,5 @@
+import { Link } from "@/types/link";
 import { LinkButton } from "../LinkButton";
-
-type Link = {
-  label: string;
-  href: string;
-};
 
 type LinksProps = {
   links: Link[];

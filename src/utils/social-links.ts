@@ -11,7 +11,15 @@ import {
   IoLogoYoutube,
 } from "react-icons/io5";
 
-import { AvailableSocialLinks } from "@/types/social-links";
+import { AvailableSocialLinks, SocialLink } from "@/types/social-links";
+import { PrismicSocialLink } from "@/types/prismic";
+
+export const normalizePrismicSocialLinks = (links: PrismicSocialLink[]): SocialLink[] => (
+  links.map((link) => ({
+    type: link.network,
+    href: link.url.url,
+  }))
+);
 
 export const SOCIAL_LINK_ICONS: Record<AvailableSocialLinks, IconType> = {
   [AvailableSocialLinks.X]: IoLogoTwitter,

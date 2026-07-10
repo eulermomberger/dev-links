@@ -1,9 +1,13 @@
 import Image from "next/image";
 
-export function Avatar() {
+type AvatarProps = {
+  avatarUrl: string;
+};
+
+export function Avatar({ avatarUrl }: AvatarProps) {
   return (
     <Image
-      src="/assets/avatar.png"
+      src={avatarUrl}
       alt="Avatar"
       width={112}
       height={112}
