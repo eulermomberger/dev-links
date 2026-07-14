@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { Layout } from "@/components/Layout";
+import { ThemeProvider } from "@/providers/ThemeProvider";
 
 import "./globals.css";
 
@@ -16,7 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="pt-BR"
+      suppressHydrationWarning
       className='h-full antialiased'
     >
       <body
@@ -25,9 +27,12 @@ export default function RootLayout({
           flex justify-center items-center
           p-6
           bg-[url('/assets/bg-mobile-light.jpg')] md:bg-[url('/assets/bg-desktop-light.jpg')] bg-cover
+          dark:bg-[url('/assets/bg-mobile.jpg')] md:dark:bg-[url('/assets/bg-desktop.jpg')]
         "
       >
-        <Layout>{children}</Layout>
+        <ThemeProvider>
+          <Layout>{children}</Layout>
+        </ThemeProvider>
       </body>
     </html>
   );

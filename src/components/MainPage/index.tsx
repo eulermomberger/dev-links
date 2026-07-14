@@ -6,6 +6,7 @@ import { Links } from "../Links";
 import { Profile } from "../Profile";
 import { SocialLinks } from "../SocialLinks";
 import { Footer } from "../Footer";
+import { ThemeModeSwitch } from "../ThemeModeSwitch";
 
 type MainPageProps = {
   profile: PrismicProfileData;
@@ -25,6 +26,8 @@ export function MainPage({ profile }: MainPageProps) {
         avatarUrl={profile.avatar.url}
         username={profile.username}
       />
+
+      <ThemeModeSwitch/>
 
       <Links links={normalizePrismicLinks(profile.links)} />
 
